@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Nicoise Salad",
+        "image": "images/nicoise_salad.jpg",
+        "time": "20 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 1 Day"
+    },
+    {
+        "name": "Poke Bowl",
+        "image": "images/poke_bowl.jpg",
+        "time": "30 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 1 Day"
+    },
+    {
+        "name": "Rose Pasta",
+        "image": "images/rose_pasta.jpg",
+        "time": "20 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 2 Days"
+    },
+    {
+        "name": "Feta Pasta",
+        "image": "images/feta_pasta.jpg",
+        "time": "30 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 2 Days"
+    },
+    {
+        "name": "Salmon & Vegetables",
+        "image": "images/salmon_vegetables.jpg",
+        "time": "30 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 3 Days"
+    },
+    {
+        "name": "Lasagna Beef",
+        "image": "images/lasagna_beef.jpg",
+        "time": "30 min",
+        "difficulty": "Hard",
+        "conservation": "Conserved 3 Days"
+    },
+    {
+        "name": "Risoto Truffle",
+        "image": "images/risoto_truffle.jpg",
+        "time": "30 min",
+        "difficulty": "Hard",
+        "conservation": "Conserved 2 Days"
+    },
+    {
+        "name": "Bruschetta Tomatoes",
+        "image": "images/bruschetta.jpg",
+        "time": "20 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 1 Days"
+    },
+    {
+        "name": "Chicken Noodles",
+        "image": "images/noodles_chicken.jpg",
+        "time": "40 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 4 Days"
+    }
+]
+
