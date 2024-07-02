@@ -163,6 +163,12 @@ body {
     display: none; 
 }
 
+.vertical-nav li a img {
+    width: 22px; 
+    height: 22px;
+    margin-right: 10px; 
+}
+
 main {
     margin-left: 220px; 
     padding: 20px;
