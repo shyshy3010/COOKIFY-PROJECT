@@ -506,8 +506,8 @@ main {
     font-style: normal;
     font-weight: 600;
     font-weight: bold;
-    white-space: nowrap;
 }
+
 .view-all-link {
     display: flex;
     align-items: center;
@@ -555,7 +555,6 @@ main {
     font-weight: 600;
     line-height: 130%; 
     font-weight: bold;
-    white-space: nowrap;
 }
 
 .view-all-link2 {
@@ -566,7 +565,6 @@ main {
     font-size: 30px;
     transition: color 0.3s ease;
     margin-left: 870px;
-    white-space: nowrap;;
 }
 
 .view-all-link2 img {
