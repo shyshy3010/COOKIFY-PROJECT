@@ -87,5 +87,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     item.querySelector('.ingredient-quantity').textContent = `${formatQuantity(updatedQuantity)} ${unit}`;
                 });
             }
+            function formatQuantity(quantity) {
+                if (Number.isInteger(quantity)) {
+                    return quantity.toFixed(0); 
+                } else {
+                    return quantity.toFixed(2);
+                }
+            }
+
+            const addToPantryBtn = document.getElementById('addToPantryBtn');
+            addToPantryBtn.disabled = true;
+
         })
     });
