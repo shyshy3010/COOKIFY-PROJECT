@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eva Levy & Shyrel Journo - Cookify</title>
 </head>
@@ -33,5 +34,47 @@
         <li><a href="#"><img src="images/notif-icon.svg" alt="Notifications"> Notifications</a></li>
         </ul>
     </nav>
+    <main>
+        <div class="recipes-title">
+            <img src="images/recipe-icon.svg" alt="recipe">
+            <h2>Recipes</h2>
+        </div>
+        <div class="filters">
+            <img src="images/filter.svg" alt="filter">
+            <select id="time-to-cook">
+                <option value="">Time to cook</option>
+                <option value="20 min">20 min</option>
+                <option value="30 min">30 min</option>
+                <option value="40 min">40 min</option>
+            </select>
+            <select id="categories">
+                <option value="">Categories</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Drink">Drink</option>
+            </select>
+            <select id="season">
+                <option value="">Season</option>
+                <option value="summer">Summer</option>
+                <option value="winter">Winter</option>
+            </select>
+            <select id="conservation">
+                <option value="">Conservation</option>
+                <option value="1 day">1 day</option>
+                <option value="2 days and more">2 days and more</option>
+            </select>
+            <select id="level">
+                <option value="">Level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="filter-button">OK</button>
+        </div>
+        <div class="recipe-container"></div>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
