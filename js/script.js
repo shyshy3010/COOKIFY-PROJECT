@@ -56,6 +56,54 @@ document.addEventListener('DOMContentLoaded', function() {
             recipeDetails.appendChild(recipeConservation);
     
             recipeInfo.appendChild(recipeDetails);
+            const menuButton = document.createElement('button');
+            menuButton.classList.add('menu-button');
+            menuButton.innerHTML = `<img src="images/More vert.svg" alt="Menu icon">`;
+    
+            const menu = document.createElement('div');
+            menu.classList.add('menu');
+    
+            const addMealPlanOption = document.createElement('div');
+            addMealPlanOption.classList.add('menu-option');
+            addMealPlanOption.textContent = 'Add to Meal Plan';
+            addMealPlanOption.addEventListener('click', function() {
+                addToMealPlan(recipe.name);
+                menu.style.display = 'none';
+            });
+    
+            const DeleteRecipeOption = document.createElement('div');
+            DeleteRecipeOption.classList.add('menu-option');
+            DeleteRecipeOption.textContent = 'Delete Recipe';
+            DeleteRecipeOption.addEventListener('click', function() {
+                recipeCard.style.display = 'none';
+                menu.style.display = 'none';
+            });
+    
+            const startRecipeOption = document.createElement('div');
+            startRecipeOption.classList.add('menu-option');
+            startRecipeOption.textContent = 'Start Recipe';
+            startRecipeOption.addEventListener('click', function() {
+             location.assign('about.html');
+            });
+    
+            menu.appendChild(addMealPlanOption);
+            menu.appendChild(DeleteRecipeOption);
+            menu.appendChild(startRecipeOption);
+            recipeCard.appendChild(menuButton);
+            recipeCard.appendChild(menu);
+    
+            menuButton.addEventListener('click', function() {
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            document.addEventListener('click', function(event) {
+                if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+                    menu.style.display = 'none';
+                }
+            });
+    
+            recipeCard.appendChild(recipeInfo);
+            recipeContainer.appendChild(recipeCard);
         });
     }
     loadRecipes();
