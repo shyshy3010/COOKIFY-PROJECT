@@ -432,3 +432,42 @@ main {
     margin-right: 10px;
     padding: 0 20px;
 }
+
+.trendingnow-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.trendingnow-title h4 {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; 
+    font-weight: bold;
+}
+
+.view-all-link2 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    margin-left: 870px;
+}
+
+.view-all-link2 img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+}
+.view-all-link2:hover {
+    color: #133A9E; 
+}
