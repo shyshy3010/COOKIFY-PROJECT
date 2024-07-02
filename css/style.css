@@ -245,7 +245,8 @@ main {
     cursor: pointer;
     border: none;
 }
-recipe-container {
+
+.recipe-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
@@ -293,9 +294,52 @@ recipe-container {
     margin-bottom: 5px; 
     display: flex;
 }
+
 .recipe-details span img {
     width: 15px;
     height: 15px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+.menu-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button img {
+    width: 50px;
+    height: 47px;
+    flex-shrink: 0;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-option {
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-option:hover {
+    background-color: #f5f5f5;
+}
+
