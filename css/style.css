@@ -789,3 +789,206 @@ main {
 .added-to-pantry-message.active {
     opacity: 1;
 }
+.pantry-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 270px;
+    margin-left: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.ingredients-section, .meals-section {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.ingredient-list, .meal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ingredient-item, .meal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.ingredient-item img, .meal-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.ingredient-item span, .meal-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.delete-ingredient-button, .delete-meal-button {
+    background-color: grey;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-ingredient-button:hover, .delete-meal-button:hover {
+    background-color: #ff4500;
+}
+.add-ingredients-button {
+    width: 130px;
+    height: 40px;
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    align-self: flex-end; 
+}
+
+
+
+.add-ingredients-button:hover, .change-color-button:hover {
+    background-color: #45a049;
+}
+
+.pantry-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 270px;
+    margin-left: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ingredients-section, .meals-section {
+    flex-grow: 1;
+    background-color: rgba(215, 212, 212, 0.937);
+    border-radius: 4px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.ingredient-list, .meal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+
+}
+
+.ingredient-item, .meal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.ingredient-item img, .meal-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.ingredient-item span, .meal-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.delete-ingredient-button, .delete-meal-button {
+    background-color: grey;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-ingredient-button:hover, .delete-meal-button:hover {
+    background-color: #ff4500;
+}
+
+
+.change-color-button {
+    margin-left: 100px;
+    width: 200px;
+    height: 40px;
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    align-self: flex-end;
+}  
+
+.add-ingredients-button:hover, .change-color-button:hover {
+    background-color: #45a049;
+}
+
+.confirmation-dialog {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.confirmation-dialog h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.confirmation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.confirmation-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.confirmation-buttons .confirm-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.confirmation-buttons .cancel-button {
+    background-color: #f44336;
+    color: white;
+}

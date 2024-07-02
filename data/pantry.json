@@ -1,0 +1,23 @@
+{
+    "pantryIngredients": [
+        {
+            "name": "Sugar",
+            "quantity": "3",
+            "unit": "pieces",
+            "image": "images/sugar.jpg"
+        },
+        {
+            "name": "Flour",
+            "quantity": "1",
+            "unit": "kg",
+            "image": "images/flour.JPG"
+        }
+    ],
+    "preparedMeals": [
+        {
+            "name": "Lasagna Beef",
+            "date": "2024-07-02",
+            "image": "images/Beef-Lasagne.jpg.webp"
+        }
+    ]
+  }
