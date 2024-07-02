@@ -69,5 +69,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 updateIngredientQuantities(this.value); 
             });
 
+            function updateIngredientQuantities(numServings) {
+                const mainIngredientsListItems = document.querySelectorAll('.main-ingredients-list li');
+                const bechamelIngredientsListItems = document.querySelectorAll('.bechamel-ingredients-list li');
+
+                mainIngredientsListItems.forEach(item => {
+                    const baseQuantity = parseFloat(item.dataset.baseQuantity);
+                    const updatedQuantity = baseQuantity * numServings;
+                    const unit = item.dataset.unit;
+                    item.querySelector('.ingredient-quantity').textContent = `${formatQuantity(updatedQuantity)} ${unit}`;
+                });
+
+                bechamelIngredientsListItems.forEach(item => {
+                    const baseQuantity = parseFloat(item.dataset.baseQuantity);
+                    const updatedQuantity = baseQuantity * numServings;
+                    const unit = item.dataset.unit;
+                    item.querySelector('.ingredient-quantity').textContent = `${formatQuantity(updatedQuantity)} ${unit}`;
+                });
+            }
         })
     });
