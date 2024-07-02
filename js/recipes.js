@@ -31,5 +31,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             `;
             cardContainer.innerHTML = cardHTML;
+
+            const mainIngredientsList = document.getElementById('main-ingredients-list');
+            recipe.mainIngredients.forEach(ingredient => {
+                const listItem = document.createElement('li');
+                listItem.dataset.baseQuantity = ingredient.baseQuantity; 
+                listItem.dataset.unit = ingredient.unit; 
+                listItem.innerHTML = `
+                    <img src="${ingredient.image}" alt="${ingredient.name}" class="ingredient-image">
+                    <span class="ingredient-name">${ingredient.name}</span>
+                    <span class="ingredient-quantity">${formatQuantity(ingredient.baseQuantity)} ${ingredient.unit}</span>
+                    <input type="checkbox" id="mainIngredient-${ingredient.id}" name="mainIngredient">
+                `;
+                mainIngredientsList.appendChild(listItem);
+            });
+
         })
     });
