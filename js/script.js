@@ -1,16 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const recipeContainer = document.querySelector('.recipe-container');
     const searchInput = document.getElementById('search-input');
-
-    searchInput.addEventListener('input', function(event) {
-        const query = event.target.value.trim().toLowerCase();
-
-        const filteredRecipes = recipesData.filter(recipe =>
-            recipe.name.toLowerCase().includes(query)
-        );
-
-        displayRecipes(filteredRecipes);
-    });
+    const filterButton = document.getElementById('filter-button');
+    const timeToCookSelect = document.getElementById('time-to-cook');
     function loadRecipes() {
         fetch("data/recipes.json")
             .then(response => response.json())
@@ -21,6 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error fetching recipes:', error);
             });
     }
+    searchInput.addEventListener('input', function(event) {
+        const query = event.target.value.trim().toLowerCase();
+
+        const filteredRecipes = recipesData.filter(recipe =>
+            recipe.name.toLowerCase().includes(query)
+        );
+
+        displayRecipes(filteredRecipes);
+    });
+    
     function displayRecipes(recipes) {
         recipeContainer.innerHTML = '';
 
