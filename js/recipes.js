@@ -45,6 +45,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
                 mainIngredientsList.appendChild(listItem);
             });
-
+            const bechamelIngredientsList = document.getElementById('bechamel-ingredients-list');
+            recipe.bechamelIngredients.forEach(ingredient => {
+                const listItem = document.createElement('li');
+                listItem.dataset.baseQuantity = ingredient.baseQuantity;
+                listItem.dataset.unit = ingredient.unit; 
+                listItem.innerHTML = `
+                    <img src="${ingredient.image}" alt="${ingredient.name}" class="ingredient-image">
+                    <span class="ingredient-name">${ingredient.name}</span>
+                    <span class="ingredient-quantity">${formatQuantity(ingredient.baseQuantity)} ${ingredient.unit}</span>
+                    <input type="checkbox" id="bechamelIngredient-${ingredient.id}" name="bechamelIngredient">
+                `;
+                bechamelIngredientsList.appendChild(listItem);
+            });
         })
     });
