@@ -58,5 +58,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
                 bechamelIngredientsList.appendChild(listItem);
             });
+            // Slider pour les portions
+            const slider = document.getElementById("myRange");
+            const output = document.getElementById("demo");
+
+            output.innerHTML = slider.value; 
+
+            slider.addEventListener('input', function() {
+                output.innerHTML = this.value;
+                updateIngredientQuantities(this.value); 
+            });
+
         })
     });
