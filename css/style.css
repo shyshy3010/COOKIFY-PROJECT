@@ -110,6 +110,7 @@ body {
     vertical-align: middle;
 }
 
+
 .vertical-nav {
     width: 20%;
     background-color:  #fbfbfb;
@@ -144,6 +145,7 @@ body {
 .vertical-nav a:hover {
     background-color: #ddd;
 }
+
 
 .vertical-nav li::after {
     content: "";
@@ -294,14 +296,12 @@ main {
     margin-bottom: 5px; 
     display: flex;
 }
-
 .recipe-details span img {
     width: 15px;
     height: 15px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
-
 .menu-button {
     cursor: pointer;
     position: absolute;
@@ -342,47 +342,3 @@ main {
 .menu-option:hover {
     background-color: #f5f5f5;
 }
-.home-title{
-    position: fixed;
-    position: absolute;
-    left: 272px;
-    top: 152px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.home-title img {
-    width: 34px;
-    height: 48px;
-    flex-shrink: 0;
-}
-
-.home-title h2 {
-    color: #000;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 130%;
-    font-weight: bold;
-}
-
-.sortby {
-    position: fixed;
-    position: absolute;
-    right: 15px;
-    top: 155px; 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 10px;
-}
-
-.sortby select {
-    font-size: 16px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
