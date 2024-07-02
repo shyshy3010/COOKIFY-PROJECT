@@ -69,5 +69,76 @@ document.addEventListener("DOMContentLoaded", function() {
                 updateIngredientQuantities(this.value); 
             });
 
+            function updateIngredientQuantities(numServings) {
+                const mainIngredientsListItems = document.querySelectorAll('.main-ingredients-list li');
+                const bechamelIngredientsListItems = document.querySelectorAll('.bechamel-ingredients-list li');
+
+                mainIngredientsListItems.forEach(item => {
+                    const baseQuantity = parseFloat(item.dataset.baseQuantity);
+                    const updatedQuantity = baseQuantity * numServings;
+                    const unit = item.dataset.unit;
+                    item.querySelector('.ingredient-quantity').textContent = `${formatQuantity(updatedQuantity)} ${unit}`;
+                });
+
+                bechamelIngredientsListItems.forEach(item => {
+                    const baseQuantity = parseFloat(item.dataset.baseQuantity);
+                    const updatedQuantity = baseQuantity * numServings;
+                    const unit = item.dataset.unit;
+                    item.querySelector('.ingredient-quantity').textContent = `${formatQuantity(updatedQuantity)} ${unit}`;
+                });
+            }
+            function formatQuantity(quantity) {
+                if (Number.isInteger(quantity)) {
+                    return quantity.toFixed(0); 
+                } else {
+                    return quantity.toFixed(2);
+                }
+            }
+
+            const addToPantryBtn = document.getElementById('addToPantryBtn');
+            addToPantryBtn.disabled = true;
+
+            document.querySelectorAll('.main-ingredients-list input[type="checkbox"], .bechamel-ingredients-list input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    updateAddToPantryBtnState();
+                });
+            });
+            function updateAddToPantryBtnState() {
+                const anyCheckboxChecked = Array.from(document.querySelectorAll('.main-ingredients-list input[type="checkbox"], .bechamel-ingredients-list input[type="checkbox"]'))
+                    .some(checkbox => checkbox.checked);
+
+                addToPantryBtn.disabled = !anyCheckboxChecked;
+                addToPantryBtn.classList.toggle('active', anyCheckboxChecked);
+            }
+
+            addToPantryBtn.addEventListener('click', function() {
+                const mainIngredientsListItems = document.querySelectorAll('.main-ingredients-list li');
+                const bechamelIngredientsListItems = document.querySelectorAll('.bechamel-ingredients-list li');
+                const selectedIngredients = [];
+
+                mainIngredientsListItems.forEach(item => {
+                    const checkbox = item.querySelector('input[type="checkbox"]');
+                    if (checkbox.checked) {
+                        const name = item.querySelector('.ingredient-name').innerText;
+                        const quantity = item.querySelector('.ingredient-quantity').innerText;
+                        selectedIngredients.push({ name, quantity });
+                    }
+                });
+
+                bechamelIngredientsListItems.forEach(item => {
+                    const checkbox = item.querySelector('input[type="checkbox"]');
+                    if (checkbox.checked) {
+                        const name = item.querySelector('.ingredient-name').innerText;
+                        const quantity = item.querySelector('.ingredient-quantity').innerText;
+                        selectedIngredients.push({ name, quantity });
+                    }
+                });
+
+                addToPantry(selectedIngredients);
+            });
+            function addToPantry(ingredients) {
+                console.log('Adding ingredients to My Pantry:', ingredients);
+                alert('Ingredients added to My Pantry!');
+            }
         })
     });
