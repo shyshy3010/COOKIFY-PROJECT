@@ -1,0 +1,13 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "title": "Lasagna Beef",
+        "imageUrl": "images/Beef-Lasagne.jpg.webp",
+        "prepTime": "10 minutes",
+        "cookTime": "20 minutes",
+        "totalTime": "30 minutes",
+        "icon-card":"images/More vert.svg"
+      }
+    ]
+}
