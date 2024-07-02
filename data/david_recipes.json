@@ -7,7 +7,83 @@
         "prepTime": "10 minutes",
         "cookTime": "20 minutes",
         "totalTime": "30 minutes",
-        "icon-card":"images/More vert.svg"
+        "icon-card":"images/More vert.svg",
+        "mainIngredients": [
+          {
+            "name": "Olive Oil",
+            "baseQuantity": 2,
+            "unit":"spoon",
+            "image": "images/oliveoill.JPG"
+          },
+          {
+            "name": "Tomato Pulp",
+            "baseQuantity": 800,
+            "unit": "g",
+            "image": "images/Tomatosauce.JPG"
+          },
+          {
+            "name": "Minced Meat",
+            "baseQuantity": 300,
+            "unit":"g",
+            "image": "images/beef.jpg"
+          },
+          {
+            "name": "Lasagna",
+            "baseQuantity": 8,
+            "unit":"plate",
+            "image": "images/lasagna.JPG"
+          },
+          {
+            "name": "Ognon",
+            "baseQuantity": 1,
+            "unit":"unity",
+            "image": "images/ognon.JPG"
+          },
+          {
+            "name": "Sugar",
+            "baseQuantity": 2,
+            "unit":"piece",
+            "image": "images/sugar.jpg"
+          },
+          {
+            "name": "Garlic",
+            "baseQuantity": 1,
+            "unit":"clove",
+            "image": "images/garlic.PNG"
+          },
+          {
+            "name": "Cheese",
+            "baseQuantity": 100,
+            "unit":"g",
+            "image": "images/cheesegratted.png"
+          }
+        ],
+        "bechamelIngredients": [
+          {
+            "name": "Flour",
+            "baseQuantity": 70,
+            "unit":"g",
+            "image": "images/flour.JPG"
+          },
+          {
+            "name": "Nutmeg",
+            "baseQuantity": 1,
+            "unit":"pinch",
+            "image": "images/nutmeg.jpg"
+          },
+          {
+            "name": "Butter",
+            "baseQuantity": 15,
+            "unit":"g",
+            "image": "images/butter.jpeg"
+          },
+          {
+            "name": "Milk",
+            "baseQuantity": 50,
+            "unit":"cl",
+            "image": "images/milk.JPG"
+          }
+        ]
       }
     ]
-}
+  }
