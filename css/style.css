@@ -317,3 +317,62 @@ body {
     margin-left: auto; 
     align-self: center; 
 }
+.slidecontainer {
+    width: 200px;
+    margin-left:220px;
+    padding: 0px;
+}
+
+
+.slider {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 200px;
+    height: 10px;
+    flex-shrink: 0; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7;
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+.slider:hover {
+    opacity: 1; 
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 22px;
+    flex-shrink: 1;
+    background: black; 
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+    background: black;
+    cursor: pointer; 
+}
+#demo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 15px;
+}
+
+#demo {
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    margin-left: 48px;
+}
