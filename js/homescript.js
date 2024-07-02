@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
     const recipeForYouContainer = document.querySelector('.recipeforyou-container');
+    const recipeTrendingNowContainer = document.querySelector('.recipetrendingnow-container');
 
     function loadRecipes(url, container) {
         fetch(url)
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     loadRecipes('data/recipes_foryou.json', recipeForYouContainer);
+    loadRecipes('data/recipes_trendingnow.json', recipeTrendingNowContainer);
 
         forYouRecipes.forEach(recipe => {
             if (recipe.name.includes(query)) {
@@ -109,6 +111,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        const trendingNowRecipes = Array.from(recipeTrendingNowContainer.children).map(card => {
+            return {
+                name: card.querySelector('h3').textContent.toLowerCase(),
+                card: card
+            };
+        });
+
+        trendingNowRecipes.forEach(recipe => {
+            if (recipe.name.includes(query)) {
+                recipe.card.style.display = 'block';
+            } else {
+                recipe.card.style.display = 'none';
+            }
+        });
     });
+
+ 
 
 
