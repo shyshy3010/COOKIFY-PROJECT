@@ -537,3 +537,58 @@ main {
     color: black;
     margin-left: 48px;
 }
+#addToPantryBtn {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 12px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    position: absolute; 
+    top: 750px; 
+    margin-left: 730px;
+    transform: translateX(-50%); 
+}
+
+#startCookingBtn {
+    background-color: #FFD700; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none; 
+    position: absolute; 
+    top: 750px; 
+    margin-right:10px;
+    transform: translateX(50%); 
+}
+
+#startCookingBtn:hover {
+    background-color: #FFD700; 
+    opacity: 0.8; 
+    cursor: pointer;
+}
+
+#addToPantryBtn:disabled {
+    background-color: #cccccc; 
+    color: #666666; 
+    cursor: not-allowed; 
+}
+
+.added-to-pantry-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.added-to-pantry-message.active {
+    opacity: 1;
+}
