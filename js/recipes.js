@@ -97,12 +97,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const addToPantryBtn = document.getElementById('addToPantryBtn');
             addToPantryBtn.disabled = true;
-            
+
             document.querySelectorAll('.main-ingredients-list input[type="checkbox"], .bechamel-ingredients-list input[type="checkbox"]').forEach(checkbox => {
                 checkbox.addEventListener('change', function() {
                     updateAddToPantryBtnState();
                 });
             });
+            function updateAddToPantryBtnState() {
+                const anyCheckboxChecked = Array.from(document.querySelectorAll('.main-ingredients-list input[type="checkbox"], .bechamel-ingredients-list input[type="checkbox"]'))
+                    .some(checkbox => checkbox.checked);
 
+                addToPantryBtn.disabled = !anyCheckboxChecked;
+                addToPantryBtn.classList.toggle('active', anyCheckboxChecked);
+            }
+
+            addToPantryBtn.addEventListener('click', function() {
+                const mainIngredientsListItems = document.querySelectorAll('.main-ingredients-list li');
+                const bechamelIngredientsListItems = document.querySelectorAll('.bechamel-ingredients-list li');
+                const selectedIngredients = [];
+
+                mainIngredientsListItems.forEach(item => {
+                    const checkbox = item.querySelector('input[type="checkbox"]');
+                    if (checkbox.checked) {
+                        const name = item.querySelector('.ingredient-name').innerText;
+                        const quantity = item.querySelector('.ingredient-quantity').innerText;
+                        selectedIngredients.push({ name, quantity });
+                    }
+                });
+
+                bechamelIngredientsListItems.forEach(item => {
+                    const checkbox = item.querySelector('input[type="checkbox"]');
+                    if (checkbox.checked) {
+                        const name = item.querySelector('.ingredient-name').innerText;
+                        const quantity = item.querySelector('.ingredient-quantity').innerText;
+                        selectedIngredients.push({ name, quantity });
+                    }
+                });
+
+                addToPantry(selectedIngredients);
+            });
         })
     });
