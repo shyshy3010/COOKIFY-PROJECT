@@ -103,6 +103,15 @@ document.addEventListener('DOMContentLoaded', function() {
     loadRecipes('data/recipes_foryou.json', recipeForYouContainer);
     loadRecipes('data/recipes_trendingnow.json', recipeTrendingNowContainer);
 
+    searchInput.addEventListener('input', function(event) {
+        const query = event.target.value.trim().toLowerCase();
+        const forYouRecipes = Array.from(recipeForYouContainer.children).map(card => {
+            return {
+                name: card.querySelector('h3').textContent.toLowerCase(),
+                card: card
+            };
+        });
+
         forYouRecipes.forEach(recipe => {
             if (recipe.name.includes(query)) {
                 recipe.card.style.display = 'block';
@@ -126,7 +135,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
- 
-
-
+});
