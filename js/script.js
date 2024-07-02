@@ -106,5 +106,21 @@ document.addEventListener('DOMContentLoaded', function() {
             recipeContainer.appendChild(recipeCard);
         });
     }
+    filterButton.addEventListener('click', function() {
+        const selectedTime = timeToCookSelect.value;
+
+        fetch("data/recipes.json")
+            .then(response => response.json())
+            .then(data => {
+                const filteredRecipes = data.filter(recipe => {
+                    return !selectedTime || recipe.time === selectedTime;
+                });
+
+                displayRecipes(filteredRecipes);
+            })
+            .catch(error => {
+                console.error('Error fetching recipes:', error);
+            });
+    });
     loadRecipes();
 });
