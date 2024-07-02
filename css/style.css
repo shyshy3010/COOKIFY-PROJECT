@@ -161,3 +161,23 @@ body {
 .vertical-nav li:last-child::after {
     display: none; 
 }
+.recipes-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    top: 152px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.recipes-title img {
+    width: 56px;
+    height: 48px;
+}
+
+.recipes-title h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
