@@ -97,6 +97,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const addToPantryBtn = document.getElementById('addToPantryBtn');
             addToPantryBtn.disabled = true;
+            
+            document.querySelectorAll('.main-ingredients-list input[type="checkbox"], .bechamel-ingredients-list input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    updateAddToPantryBtnState();
+                });
+            });
 
         })
     });
