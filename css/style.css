@@ -386,3 +386,40 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.foryou-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    top: 260px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.foryou-title h3 {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-weight: bold;
+}
+.view-all-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    margin-left: 950px;
+}
+
+.view-all-link:hover {
+    color: #133A9E; 
+}
+
+.view-all-link img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+}
