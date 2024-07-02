@@ -468,6 +468,16 @@ main {
     height: 20px; 
     margin-right: 10px; 
 }
+
 .view-all-link2:hover {
     color: #133A9E; 
+}
+
+.recipetrendingnow-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 160px;
+    margin-right: 10px;
+    padding: 0 20px;
 }
