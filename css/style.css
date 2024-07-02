@@ -160,3 +160,88 @@ body {
 .vertical-nav li:last-child::after {
     display: none; 
 }
+
+main {
+    margin-left: 220px; 
+    padding: 20px;
+}
+
+.filters {
+    position: fixed;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    align-items: center;
+    gap: 24px;
+}
+
+.filters select, .filters button {
+    width: 156px;
+    height: 59px;
+    font-size: 20px;
+    border: 1px solid #e1dede;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    right: 557px;
+    top: 236px;
+
+}
+
+.filters button {
+    cursor: pointer;
+    background-color: #d8d5d5;
+    color: black;
+    border: none;
+}
+
+.recipes-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    top: 152px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.recipes-title img {
+    width: 56px;
+    height: 48px;
+}
+
+.recipes-title h2 {
+    font-size: 40px;
+    font-weight:bold;
+}
+
+.filters {
+    position: absolute;
+    left: 272px;
+    top: 243px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters img {
+    width: 54px;
+    height: 39px;
+}
+
+.filters select,
+#filter-button {
+    font-size: 20px;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    gap: 32px;
+}
+
+#filter-button {
+    background-color: #d9d9d9;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
