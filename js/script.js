@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const recipeContainer = document.querySelector('.recipe-container');
+    const searchInput = document.getElementById('search-input');
 
+    searchInput.addEventListener('input', function(event) {
+        const query = event.target.value.trim().toLowerCase();
+
+        const filteredRecipes = recipesData.filter(recipe =>
+            recipe.name.toLowerCase().includes(query)
+        );
+
+        displayRecipes(filteredRecipes);
+    });
     function loadRecipes() {
         fetch("data/recipes.json")
             .then(response => response.json())
