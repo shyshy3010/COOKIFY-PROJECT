@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     loadRecipes('data/recipes_foryou.json', recipeForYouContainer);
     loadRecipes('data/recipes_trendingnow.json', recipeTrendingNowContainer);
-
+    
+    
     searchInput.addEventListener('input', function(event) {
         const query = event.target.value.trim().toLowerCase();
         const forYouRecipes = Array.from(recipeForYouContainer.children).map(card => {
