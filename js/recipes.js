@@ -136,5 +136,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 addToPantry(selectedIngredients);
             });
+            function addToPantry(ingredients) {
+                console.log('Adding ingredients to My Pantry:', ingredients);
+                alert('Ingredients added to My Pantry!');
+            }
         })
     });
