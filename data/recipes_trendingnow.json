@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Bella Hadid Pasta",
+        "image": "images/bellahadidpasta.jpg",
+        "time": "20 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 2 Day"
+    },
+    {
+        "name": "Crookie",
+        "image": "images/crookie.jpg",
+        "time": "40 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 4 Day"
+    },
+    {
+        "name": "Mini Pancakes",
+        "image": "images/minipancake.jpg",
+        "time": "30 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 4 Days"
+    },
+    {
+        "name": "Feta Pasta",
+        "image": "images/feta_pasta.jpg",
+        "time": "30 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 2 Days"
+    }
+]
+

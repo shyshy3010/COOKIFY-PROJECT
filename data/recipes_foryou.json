@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Pizza Burrata",
+        "image": "images/pizza_burrata.jpg",
+        "time": "120 min",
+        "difficulty": "hard",
+        "conservation": "Conserved 1 Day"
+    },
+    {
+        "name": "Spaghetti Bolognese",
+        "image": "images/spaghetti_bolognese.jpg",
+        "time": "40 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 3 Day"
+    },
+    {
+        "name": "French Crepes",
+        "image": "images/crepes.jpg",
+        "time": "25 min",
+        "difficulty": "Easy",
+        "conservation": "Conserved 3 Days"
+    },
+    {
+        "name": "Caramelized Chicken",
+        "image": "images/chicken.jpg",
+        "time": "30 min",
+        "difficulty": "Medium",
+        "conservation": "Conserved 3 Days"
+    }
+]
+

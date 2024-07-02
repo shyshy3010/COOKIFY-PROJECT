@@ -163,6 +163,12 @@ body {
     display: none; 
 }
 
+.vertical-nav li a img {
+    width: 22px; 
+    height: 22px;
+    margin-right: 10px; 
+}
+
 main {
     margin-left: 220px; 
     padding: 20px;
@@ -438,6 +444,197 @@ main {
     font-size: 14px; 
     font-weight: 400;
     line-height: 130%; 
+}
+
+.home-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    top: 152px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.home-title img {
+    width: 34px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.home-title h2 {
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    font-weight: bold;
+}
+
+.sortby {
+    position: fixed;
+    position: absolute;
+    right: 15px;
+    top: 155px; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.sortby select {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.foryou-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    top: 260px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.foryou-title h3 {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-weight: bold;
+}
+.view-all-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    margin-left: 950px;
+}
+
+.view-all-link:hover {
+    color: #133A9E; 
+}
+
+.view-all-link img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+}
+
+.recipeforyou-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 340px;
+    margin-right: 10px;
+    padding: 0 20px;
+}
+
+.trendingnow-title{
+    position: fixed;
+    position: absolute;
+    left: 272px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.trendingnow-title h4 {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; 
+    font-weight: bold;
+}
+
+.view-all-link2 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    margin-left: 870px;
+}
+
+.view-all-link2 img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+}
+
+.view-all-link2:hover {
+    color: #133A9E; 
+}
+
+.recipetrendingnow-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 160px;
+    margin-right: 10px;
+    padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .vertical-nav {
+        width: 100%;
+        position: static;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .vertical-nav {
+        width: 30%;
+    }
+
+    .navbar {
+        padding-left: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+}
+
+@media (min-width: 901px) {
+    .vertical-nav {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 220px;
+    }
 }
 
 .ingredients-container .main-ingredients-list,
